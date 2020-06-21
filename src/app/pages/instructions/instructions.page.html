@@ -1,0 +1,26 @@
+<ion-header>
+ 
+</ion-header>
+
+<ion-content>
+
+  
+   <ion-slides pager="true" [options]="slideOpts">
+      <ion-slide>
+          <h1>Slide1</h1>
+      </ion-slide>
+     <ion-slide>
+          <h1>Slide2</h1>
+      </ion-slide>
+      <ion-slide>
+         <ion-button class="clk"  (click)="something('personal')" routerDirection="forward">
+            Personal
+         </ion-button>
+         <ion-button class="clk" (click)="something('business')" >
+            Business
+         </ion-button>
+      </ion-slide>
+   </ion-slides>
+
+</ion-content>
+

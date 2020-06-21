@@ -11,6 +11,27 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'instructions',
+    loadChildren: () => import('./pages/instructions/instructions.module').then( m => m.InstructionsPageModule)
+  },
+  {
+    path: 'fill-data',
+    loadChildren: () => import('./pages/fill-data/fill-data.module').then( m => m.FillDataPageModule)
+  },
+  {
+    path: 'temperature',
+    loadChildren: () => import('./pages/temperature/temperature.module').then( m => m.TemperaturePageModule)
+  },
+  {
+    path: 'logs',
+    loadChildren: () => import('./pages/logs/logs.module').then( m => m.LogsPageModule)
+  },
+  {
+    path: 'setting',
+    loadChildren: () => import('./pages/setting/setting.module').then( m => m.SettingPageModule)
+  },
+
 ];
 
 @NgModule({

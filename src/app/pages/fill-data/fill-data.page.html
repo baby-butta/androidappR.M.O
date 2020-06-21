@@ -1,0 +1,60 @@
+<ion-header>
+</ion-header>
+
+<ion-content>
+
+  <ion-card *ngIf="type === 'personal'">
+      <ion-card-header>
+          <ion-card-title>Personal User Profile</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+            <ion-item>
+                <ion-label  position="floating"> Name </ion-label>
+                <ion-input [(ngModel)]="name" type="text"></ion-input>
+            </ion-item>
+             <ion-item>
+                <ion-label position="floating"> Age </ion-label>
+                <ion-input [(ngModel)]="age" type="number"></ion-input>
+            </ion-item>
+             <ion-item>
+                <ion-label position="floating"> Weight (kg)</ion-label>
+                <ion-input [(ngModel)]="weight" type="number"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating"> Height (cm)</ion-label>
+                <ion-input [(ngModel)]="height" type="number"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Previous Health Issues</ion-label>
+                <ion-checkbox slot="start" (click)="check()"></ion-checkbox>
+                <ion-input [(ngModel)]="healthIssue" type="text"  placeholder="condition"  disabled={{isCheck}}></ion-input>
+            </ion-item>
+             <ion-item>
+                <ion-label position="floating">Emergency Contact</ion-label>
+                <ion-input [(ngModel)]="contact" type="text"></ion-input>
+            </ion-item>
+      </ion-card-content>
+  </ion-card>
+  <ion-card *ngIf="type === 'business'">
+      <ion-card-header>
+          <ion-card-title>Business User Profile</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+            <ion-item>
+                <ion-label position="floating"> Name </ion-label>
+                <ion-input [(ngModel)]="name" type="text"></ion-input>
+            </ion-item>
+             <ion-item>
+                <ion-label position="floating"> Age </ion-label>
+                <ion-input [(ngModel)]="age" type="number"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating">Contact</ion-label>
+                <ion-input [(ngModel)]="contact" type="text"></ion-input>
+            </ion-item>
+      </ion-card-content>
+  </ion-card>
+
+  <ion-button (click)="submit()">Next</ion-button>
+
+</ion-content>

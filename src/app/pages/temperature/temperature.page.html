@@ -1,0 +1,40 @@
+
+
+<ion-toolbar>
+    <ion-menu-button slot="start"><ion-icon name="menu-outline"></ion-icon></ion-menu-button>
+</ion-toolbar> 
+ <ion-menu side="start" menuId="first" contentId="main">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item><ion-router-link class="menu-link" routerLink="/setting" routerDirection="forward">Setting</ion-router-link></ion-item>
+      <ion-item><ion-router-link class="menu-link" routerLink="/logs" routerDirection="forward">Logs</ion-router-link></ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-router-outlet id="main"></ion-router-outlet>
+<ion-content>
+
+    <div class="ion-text-center box" style="margin-top:50%">
+        <h1>Measure temperature</h1>
+        <h1  style="margin-left:20px;font-size:50px">{{temperature}}°</h1>
+        <ion-button color="success" class="mybtn" (click)="checkTemperature()" >Go</ion-button>
+
+        <div id="s">
+            <ion-button (click)="save()" >Save</ion-button>
+        </div>
+     
+    </div>
+    
+    
+  
+    
+</ion-content>
+<div id="inlay" [ngClass]="{'check':green ,'danger': red}">
+    </div>
+

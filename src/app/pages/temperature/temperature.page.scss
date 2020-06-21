@@ -1,0 +1,59 @@
+#s{
+    display:none;
+  }
+
+  .box{
+    position: relative;
+    z-index:2;
+  }
+  .check{
+    
+    height: 20px;
+    position: relative;
+    z-index:1;
+    animation-name: screen;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+.menu-link{
+  
+  width: 100%;
+  
+}
+  .danger{
+    
+    height: 20px;
+    position: relative;
+    z-index:1;
+    animation-name: red-screen;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes screen{
+    from{background:white;}
+    to{transform-origin: bottom center; transform: scaleY(80);background:#69bb7b;}
+  }
+
+  @keyframes red-screen{
+    from{background:white;}
+    to{transform-origin: bottom center; transform: scaleY(80);background:#eb445a;}
+  }
+
+  @media only screen and (max-width: 1000px){
+    @keyframes screen{
+        from{background:white;}
+        to{transform-origin: bottom center; transform: scaleY(110);background:#69bb7b;}
+      }
+  }
+
+  @media only screen and (max-width: 768px){
+       @keyframes screen{
+        from{background:white;}
+        to{transform-origin: bottom center; transform: scaleY(105);background:#69bb7b;}
+      }
+  }
+
+  #inlay{
+      height: 10px;
+  }

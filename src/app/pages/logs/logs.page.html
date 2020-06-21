@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>logs</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list *ngIf="type == 'personal'">
+      <ion-item *ngFor="let item of items">
+        <ion-grid>
+          <ion-row>
+              <ion-col>
+                 <ion-icon name="thermometer-outline"></ion-icon>{{item.temp}}°
+              </ion-col>
+
+               <ion-col>
+                 <ion-icon name="today-outline"></ion-icon>{{item.date}}
+              </ion-col>
+
+               <ion-col>
+                  <ion-icon name="time-outline"></ion-icon>{{item.time}}
+              </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngIf="type == 'business'">
+      <ion-item *ngFor="let item of items">
+        <ion-grid>
+          <ion-row>
+              <ion-col>
+                 <ion-icon name="person-outline"></ion-icon>{{item.name}}
+              </ion-col>
+
+               <ion-col>
+                 <ion-icon name="thermometer-outline"></ion-icon>{{item.temperature}}°
+              </ion-col>
+
+               <ion-col>
+                  <ion-icon name="today-outline"></ion-icon>{{item.date}}
+              </ion-col>
+
+              <ion-col>
+                  <ion-icon name="time-outline"></ion-icon>{{item.time}}
+              </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+    </ion-list>
+
+  
+</ion-content>
